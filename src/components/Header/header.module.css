@@ -1,0 +1,25 @@
+  .logo {
+    width: 134px;
+  }
+
+  header nav {
+    position: fixed;
+    right: 0;
+    background-color: rgb(27, 125, 210);
+    width: 100svw;
+    height: 100svh;
+    translate: 10%;
+  }
+
+  header {
+    display: flex;
+  }
+
+  .nav-right {
+    margin-left: auto;
+  }
+  
+nav.close {
+  translate: 0%;
+  background-color: aqua;
+}
