@@ -1,0 +1,153 @@
+<section id="hero">
+  <div class="hero--container">
+    <div class="hero--content">
+      <h1>Great teamwork starts with a digital HQ</h1>
+      <p class="tagline"><span>Slack is free to try</span> for as long as you`d like</p>
+      <div class="buttons">
+        <button class="btn-primary">sign up with email</button>
+        <button class="btn-brand">
+          <img src="/images/logo-google.png" alt="Google logo in button">
+          <p>
+            Sign up with google
+          </p>
+        </button>
+      </div>
+    </div>
+    <div class="hero--image">
+      <img src="/images/hero-product-ui.png" alt="Slack ui">
+    </div>
+  </div>
+</section>
+
+<style>
+  section#hero {
+    color: var(--white);
+    background-color: var(--purple);
+    padding-block-end: calc(var(--p-sm) * 4);
+  }
+
+  .hero--container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-block-start: calc(var(--p-sm) * 3) ;
+    gap: 2rem;
+  }
+
+  .hero--content {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    padding-inline: var(--p-sm);
+  }
+
+  .hero--content :where(h1, p) {
+    text-align: center;
+  }
+
+  .hero--content p.tagline {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  
+    .hero--content p.tagline span {
+      color: var(--yellow);
+    }
+
+  .hero--content .buttons   {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem
+  }
+
+  .hero--content .buttons button  {
+    flex: 1;
+    max-height: 55px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+  .hero--content .buttons button img {
+    /* object-fit: cover; */
+    aspect-ratio: 1 / 1;
+    background-color: var(--white);
+    padding: 2px;
+    width: 20px;
+  }
+  
+  @media (width > 720px) {
+    section#hero {
+      background-image: url("/images/background-singup.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .hero--content{
+      flex: 2;
+      margin-block: auto;
+    }
+
+    .hero--content :where(h1, p) {
+      text-align: left;
+    }
+
+    .hero--content h1 {
+      font-size: 4rem;
+    }
+
+    .hero--image {
+      flex: 1;
+      display: flex;
+      margin-block: auto;
+    }
+    
+    .hero--image img {
+      height: 300px;
+      object-fit: cover;
+      object-position: left;
+    }
+  }
+
+  @media (width > 1024px) {
+    section#hero {
+      background-image: none;
+    }
+    .hero--container {
+      max-width: 1440px;
+      margin-inline: auto;
+      padding-block-start: calc(var(--p-sm) * 3);
+    }
+    
+    .hero--content h1{
+      flex: 1;
+      max-width: 400px;
+      margin-bottom: 3rem;
+    }
+    
+    .hero--content p.tagline{
+      max-width: 350px;
+      font-size: 1.3rem;
+    }
+  
+    .hero--content .buttons   {
+      flex-direction: row;
+    }
+
+    .hero--image  {
+      flex: 2;
+      justify-content: end;
+    }
+    .hero--image img {
+      margin-block-start: auto;
+      height: 400px;
+    }
+  }
+  /* #hero .btn-brand {
+    background-image: url("/images/logo-google.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+  } */
+</style>

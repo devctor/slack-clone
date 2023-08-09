@@ -1,6 +1,5 @@
 {
   "stylelint.validate": [
-      ...,
       // ↓ Add "html" language.
       "html",
       // ↓ Add "vue" language.
@@ -9,5 +8,10 @@
       "svelte",
       // ↓ Add "astro" language.
       "astro",
+      "javascript",
+      "javascriptreact",
+      "astro", // Enable .astro
+      "typescript", // Enable .ts
+      "typescriptreact" // Enable .tsx
   ]
 }

@@ -1,6 +1,7 @@
-const toggleMenu = document.getElementById('toggle-menu')
-
-toggleMenu?.addEventListener('click', () => {
-
-  console.log('Hello astro')
+  const toggleMenu = document.querySelectorAll('button.toggle-menu')
+  const nav = document.getElementById('header__nav')
+  toggleMenu.forEach(btn => {
+    btn.addEventListener('click', () => {
+      nav?.classList.toggle('close')
+    })
   })

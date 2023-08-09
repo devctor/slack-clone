@@ -1,7 +1,6 @@
 ---
 import '@fontsource-variable/manrope';
-import Header from '../components/Header/Header.astro';
-import ReactTest from '../components/ReactTest';
+import Header from '../components/header/Header.astro';
 interface Props {
 	title: string;
 }
@@ -15,13 +14,12 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/images/iso-slack.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
 		<Header />
-		<ReactTest client:load/>
 		<slot />
 	</body>
 </html>
@@ -31,11 +29,52 @@ const { title } = Astro.props;
 		--accent-light: 224, 204, 250;
 		--accent-dark: 49, 10, 101;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
+		--white: rgb(255,255,255);
+
+        --purple: #540B51;
+        --ivory: #F3EAE2;
+        --blue: #4285F4;
+        --dark: #191817;
+        --black: #000000;
+        --yellow: #ECB12F;
+        --darkerblue: #2E71A6;
+        --grey: #454245;
+
+        --p-sm: 1rem;
 	}
 	body {
-		font-family: 'Manrope', system-ui, sans-serif;
+		font-family:  'Manrope Variable', system-ui, sans-serif;
 		background-color: #6d706e;
 	}
+
+    h1 {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+    .btn-primary {
+        background-color: var(--white);
+        color: var(--purple);
+        border-radius: 3px;
+        padding: var(--p-sm) calc(var(--p-sm) * 2);
+        text-transform: uppercase;
+        border: 1px inset transparent;
+        font-weight: 700;
+    }
+    .btn-primary:hover {
+        position: relative;
+        border: 1px solid var(--purple);
+        cursor: pointer; 
+    }
+    
+    .btn-brand {
+        color: var(--white);
+        text-transform: uppercase;
+        font-weight: 700;
+        background-color: var(--blue);
+        padding: var(--p-sm) calc(var(--p-sm) * 2);
+        border-radius: 3px;
+    }
 	
 	/***
     The new CSS reset - version 1.9 (last updated 19.6.2023)
@@ -138,4 +177,3 @@ meter {
     all: revert;
 }
 </style>
-../components/Header/Header.tsx

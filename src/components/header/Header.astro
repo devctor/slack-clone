@@ -1,0 +1,41 @@
+---
+import { Search, Menu, X } from 'lucide-react'
+import './header.css'
+---
+<header>
+  <div class="wrapper__header">
+    <div class="logo">
+      <a href="/">
+        <img src="/images/slack-logo.png" alt="Slack Logo">
+      </a>
+    </div>
+    <nav id="header__nav">
+      <div class="header__nav--heading">
+        <a href="/">
+          <img class="logo" src="/images/slack-dark.svg" alt="Logo slack nav">
+        </a>
+        <button class='toggle-menu'>
+          <X />
+        </button>
+      </div>
+      <ul>
+        <li><a href="/product">Product</a></li>     
+        <li><a href="/Solutions">Solutions</a></li>
+        <li><a href="/enterprise">Enterprise</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <button class='search' data-search>
+      <Search color='#FFFFFF'/>
+    </button>
+    <a href="/sigin">Sign In</a>
+      <button class='toggle-menu' data-open-btn>
+        <Menu color='#FFFFFF'/>
+      </button>
+      <button class="btn-primary">Try for free</button>
+    </div>
+  </div>
+</header>
+<script src="../../scripts/header.ts"></script>
